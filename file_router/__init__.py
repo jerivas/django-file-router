@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.template import RequestContext, Template
 from django.urls import path
 
-__version__ = "9999dev0"  # Managed by semantic-release, do not edit
+__version__ = "0.1.0"
 
 
 def file_patterns(start_dir, append_slash=False):

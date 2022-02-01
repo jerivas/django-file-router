@@ -2,6 +2,12 @@
 
 File and folder-based routes for Django views.
 
+## Installation
+
+```
+pip install django-file-router
+```
+
 ## The problem
 
 Imagine you are creating a Django project with some CRUD views for your objects. How many files do you need to allow users to create a new object?

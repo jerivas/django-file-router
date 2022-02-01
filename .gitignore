@@ -1,5 +1,6 @@
 .venv
 .vscode
+/dist
 *.sqlite3
 *.egg-info
 __pycache__
