@@ -105,6 +105,8 @@ def view(request, id):
     return render_str(__doc__, request, {"obj": obj})
 ```
 
+More examples are available in the [demo folder](https://github.com/jerivas/django-file-router/tree/main/demo).
+
 ## FAQ
 
 ### What about separation of concerns?
