@@ -3,11 +3,11 @@
 
 <ul>
     {% for color in colors %}
-        <li><a href="/colors/{{ color.slug }}">{{ color.name }}</a></li>
+        <li><a href="{% url 'colors-slug' color.slug %}">{{ color.name }}</a></li>
     {% endfor %}
 </ul>
 
-<p><a href="/colors/add">Add a new color</a></p>
+<p><a href="{% url 'colors-add' %}">Add a new color</a></p>
 """
 
 from demo.models import Color
