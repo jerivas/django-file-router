@@ -125,7 +125,15 @@ Yes, currently template code is just a plain string, but I'm sure there's a way 
 
 ### What about named URL patterns?
 
-It should be reasonably easy to add those to the auto-generated patterns following the folder structure or maybe even a decorator or attribute on the `view`.
+Every url pattern will also have an auto-generated url name. For example:
+
+| URL                    | URL name            |
+|------------------------|---------------------|
+| `/mymodel`             | `mymodel`           |
+| `/mymodel/add`         | `mymodel-add`       |
+| `/mymodel/<id>`        | `mymodel-id`        |
+| `/mymodel/<id>/edit`   | `mymodel-id-edit`   |
+| `/mymodel/<id>/delete` | `mymodel-id-delete` |
 
 ### Are you serious?
 
