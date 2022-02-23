@@ -47,7 +47,7 @@ def file_patterns(start_dir, append_slash=False):
             except AttributeError:
                 url = "" if file == "__init__.py" else file.replace(".py", "")
                 url = start_dir_re.sub("", f"{root}/{url}").strip("/")
-                url = (url + "/") if append_slash else url
+                url = (url + "/") if append_slash and url != "" else url
 
             try:
                 urlname = view_fn.urlname

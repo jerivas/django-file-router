@@ -9,6 +9,22 @@ def color():
     return Color.objects.create(name="Foo Color", slug="foo", code="00ff00")
 
 
+def test_not_a_view(client):
+    with pytest.raises(NoReverseMatch):
+        reverse("not_a_view")
+
+    response = client.get("/not-a-view")
+    assert response.status_code == 404
+
+
+def test_append_slash(settings):
+    settings.ROOT_URLCONF = "demo.urls_with_slash"
+    assert reverse("home") == "/"
+    assert reverse("colors") == "/colors/"
+    assert reverse("colors_add") == "/colors/add/"
+    assert reverse("colors_slug", args=["abc"]) == "/colors/abc/"
+
+
 def test_home(client):
     url = reverse("home")
     assert (
@@ -27,14 +43,6 @@ def test_current_time(client):
 
     response = client.get(url)
     assert response.status_code == 200
-
-
-def test_not_a_view(client):
-    with pytest.raises(NoReverseMatch):
-        reverse("not_a_view")
-
-    response = client.get("/not-a-view")
-    assert response.status_code == 404
 
 
 @pytest.mark.django_db
