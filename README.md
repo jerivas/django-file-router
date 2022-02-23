@@ -141,10 +141,20 @@ Every url pattern will also have an auto-generated url name. For example:
 | URL                    | URL name            |
 |------------------------|---------------------|
 | `/mymodel`             | `mymodel`           |
-| `/mymodel/add`         | `mymodel-add`       |
-| `/mymodel/<id>`        | `mymodel-id`        |
-| `/mymodel/<id>/edit`   | `mymodel-id-edit`   |
-| `/mymodel/<id>/delete` | `mymodel-id-delete` |
+| `/mymodel/add`         | `mymodel_add`       |
+| `/mymodel/<id>`        | `mymodel_id`        |
+| `/mymodel/<id>/edit`   | `mymodel_id_edit`   |
+| `/mymodel/<id>/delete` | `mymodel_id_delete` |
+
+Alternatively you can add `url` and `urlname` properties to your `view`:
+
+```python
+def view(request):
+    ...
+
+view.url = "custom/url/path"
+view.urlname = "my_custom_name"
+```
 
 ### Are you serious?
 
