@@ -1,15 +1,15 @@
-# django-file-router
+# Django File Router
 
 File and folder-based routes for Django views.
 
-[![PyPi version](https://badgen.net/pypi/v/django-file-router/)](https://pypi.com/project/django-file-router)
-[![PyPI Python versions](https://img.shields.io/pypi/pyversions/django-file-router.svg)](https://pypi.python.org/pypi/django-file-router/)
-[![PyPI Django versions](https://img.shields.io/pypi/djversions/django-file-router.svg)](https://pypi.python.org/pypi/django-file-router/)
-[![PyPI license](https://img.shields.io/pypi/l/django-file-router.svg)](https://pypi.python.org/pypi/django-file-router/)
+[![PyPi version](https://badgen.net/pypi/v/django-file-router/)](https://pypi.org/project/django-file-router/)
+![PyPI Python versions](https://img.shields.io/pypi/pyversions/django-file-router.svg)
+![PyPI Django versions](https://img.shields.io/pypi/djversions/django-file-router.svg)
+![PyPI license](https://img.shields.io/pypi/l/django-file-router.svg)
 
 [![Test status](https://github.com/jerivas/django-file-router/actions/workflows/test.yml/badge.svg)](https://github.com/jerivas/django-file-router/actions/workflows/test.yml)
 [![Coverage](https://codecov.io/gh/jerivas/django-file-router/branch/main/graph/badge.svg?token=CGVTXOKQUW)](https://codecov.io/gh/jerivas/django-file-router)
-[![Formatted with Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Formatted with Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://black.readthedocs.io/en/stable/)
 [![Follows Semantic Versioning](https://img.shields.io/badge/follows-SemVer-green.svg)](https://semver.org)
 
 
