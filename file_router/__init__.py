@@ -28,10 +28,10 @@ def file_patterns(start_dir, append_slash=False):
     patterns = []
     start_dir_re = re.compile(f"^{start_dir}")
     for root, dirs, files in os.walk(start_dir):
-        # Reverse the list so files that start with "<" go to the bottom and
-        # regular files come to the top. This ensures hard-coded url params
-        # always match before variable ones
-        files = tuple(reversed(files))
+        # Reverse-sort the list so files that start with "<" go to the bottom
+        # and regular files come to the top. This ensures hard-coded url params
+        # always match before variable ones like <pk> and <slug>
+        files = sorted(files, reverse=True)
         for file in files:
             if not file.endswith(".py"):
                 continue
