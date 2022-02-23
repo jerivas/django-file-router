@@ -11,14 +11,14 @@ __version__ = "0.2.0"
 DISALLOWED_CHARS = re.compile(
     "|".join(
         [
-            r"^-+",  # Leading dashes
+            r"^_+",  # Leading underscores
             r"[<>]",  # Angle brackets (url param wrapper)
             r"\w+\:",  # Letters followed by colon (path converters)
-            r"-+$",  # Trailing dashes
+            r"_+$",  # Trailing underscores
         ]
     )
 )
-TO_DASHES = re.compile("[/_]")  # Match slash and underscore
+TO_UNDERSCORES = re.compile("[/-]")  # Slash and dash
 
 
 def file_patterns(start_dir, append_slash=False):
@@ -45,14 +45,14 @@ def file_patterns(start_dir, append_slash=False):
             try:
                 url = view_fn.url
             except AttributeError:
-                url = "" if file == "index.py" else file.replace(".py", "")
+                url = "" if file == "__init__.py" else file.replace(".py", "")
                 url = start_dir_re.sub("", f"{root}/{url}").strip("/")
                 url = (url + "/") if append_slash else url
 
             try:
                 urlname = view_fn.urlname
             except AttributeError:
-                urlname = DISALLOWED_CHARS.sub("", TO_DASHES.sub("-", url))
+                urlname = DISALLOWED_CHARS.sub("", TO_UNDERSCORES.sub("_", url))
 
             patterns.append(path(url, view_fn, name=urlname))
     return patterns

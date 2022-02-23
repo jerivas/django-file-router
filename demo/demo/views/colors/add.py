@@ -35,5 +35,5 @@ def view(request):
     form = ColorAddForm(request.POST or None)
     if request.method == "POST" and form.is_valid():
         color = form.save()
-        return redirect("colors-slug", color.slug)
+        return redirect("colors_slug", color.slug)
     return render_str(__doc__, request, {"form": form})
