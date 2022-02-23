@@ -2,6 +2,11 @@
 
 File and folder-based routes for Django views.
 
+[![PyPi version](https://badgen.net/pypi/v/django-file-router/)](https://pypi.com/project/django-file-router)
+[![PyPI Python versions](https://img.shields.io/pypi/pyversions/django-file-router.svg)](https://pypi.python.org/pypi/django-file-router/)
+[![PyPI Django versions](https://img.shields.io/pypi/djversions/django-file-router.svg)](https://pypi.python.org/pypi/django-file-router/)
+[![PyPI license](https://img.shields.io/pypi/l/django-file-router.svg)](https://pypi.python.org/pypi/django-file-router/)
+
 ## Installation
 
 ```
