@@ -7,6 +7,12 @@ File and folder-based routes for Django views.
 [![PyPI Django versions](https://img.shields.io/pypi/djversions/django-file-router.svg)](https://pypi.python.org/pypi/django-file-router/)
 [![PyPI license](https://img.shields.io/pypi/l/django-file-router.svg)](https://pypi.python.org/pypi/django-file-router/)
 
+[![Test status](https://github.com/jerivas/django-file-router/actions/workflows/test.yml/badge.svg)](https://github.com/jerivas/django-file-router/actions/workflows/test.yml)
+[![Coverage](https://codecov.io/gh/jerivas/django-file-router/branch/main/graph/badge.svg?token=CGVTXOKQUW)](https://codecov.io/gh/jerivas/django-file-router)
+[![Formatted with Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Follows Semantic Versioning](https://img.shields.io/badge/follows-SemVer-green.svg)](https://semver.org)
+
+
 ## Installation
 
 ```
