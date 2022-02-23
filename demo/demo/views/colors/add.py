@@ -8,10 +8,11 @@
 </form>
 """
 
-from demo.models import Color
 from django import forms
 from django.shortcuts import redirect
 from django.template.defaultfilters import slugify
+
+from demo.models import Color
 from file_router import render_str
 
 

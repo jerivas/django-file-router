@@ -1,0 +1,7 @@
+[run]
+omit =
+    demo/wsgi.py
+    manage.py
+
+[report]
+show_missing = True

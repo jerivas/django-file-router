@@ -9,7 +9,7 @@ class Color(models.Model):
     slug = models.SlugField(max_length=100)
     code = models.CharField(max_length=8)
 
-    def __str__(self):
+    def __str__(self):  # pragma: nocover
         return self.name
 
 
