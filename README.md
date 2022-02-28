@@ -88,9 +88,9 @@ myapp
         ├── <id>
         │   ├── delete.py
         │   ├── edit.py
-        │   └── index.py
+        │   └── __init__.py
         ├── add.py
-        └── index.py
+        └── __init__.py
 
 3 directories, 5 files
 ```
@@ -105,7 +105,7 @@ This would generate the following URL patterns:
 
 Each file now holds all the pieces required to perform a given action and requires much less context switching.
 
-Notice that special placeholders like `<id>` are parsed as expected by Django's [`path`](https://docs.djangoproject.com/en/4.0/topics/http/urls/#how-django-processes-a-request) function, which means you can use path converters by including them in file and folder names such as `<int:id>`. For example, to get a single instance enforcing an integer `id` create a file `myapp/views/mymodel/<int:id>/index.py` with the code:
+Notice that special placeholders like `<id>` are parsed as expected by Django's [`path`](https://docs.djangoproject.com/en/4.0/topics/http/urls/#how-django-processes-a-request) function, which means you can use path converters by including them in file and folder names such as `<int:id>`. For example, to get a single instance enforcing an integer `id` create a file `myapp/views/mymodel/<int:id>/__init__.py` with the code:
 
 ```python
 """

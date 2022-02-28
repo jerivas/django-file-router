@@ -1,7 +1,19 @@
+from pathlib import Path
+
 import pytest
 from django.urls import NoReverseMatch, reverse
 
 from demo.models import Color
+
+
+@pytest.fixture(autouse=True)
+def change_test_dir(monkeypatch):
+    """
+    For these tests change the CWD to the Django project root. This ensures the
+    view folder location works as expected in the call to `file_patterns` in
+    `urls.py`, even when pytest is called from the repo root.
+    """
+    monkeypatch.chdir(str(Path(__file__).parent.parent))
 
 
 @pytest.fixture
@@ -15,14 +27,6 @@ def test_not_a_view(client):
 
     response = client.get("/not-a-view")
     assert response.status_code == 404
-
-
-def test_append_slash(settings):
-    settings.ROOT_URLCONF = "demo.urls_with_slash"
-    assert reverse("home") == "/"
-    assert reverse("colors") == "/colors/"
-    assert reverse("colors_add") == "/colors/add/"
-    assert reverse("colors_slug", args=["abc"]) == "/colors/abc/"
 
 
 def test_home(client):
