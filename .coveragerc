@@ -1,0 +1,10 @@
+[run]
+omit =
+    demo/wsgi.py
+    manage.py
+    setup.py
+# Don't check for coverage in the temporary views folder at root. `demo/views/` should be covered
+    views/*
+
+[report]
+show_missing = True

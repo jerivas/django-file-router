@@ -80,8 +80,5 @@ jobs:
           pip install -e ".[testing]"
           pip install "django~=${{ matrix.django }}"
       - name: Test
-        run: (cd demo; pytest --cov-report=xml)
+        run: pytest --cov-report=xml
       - uses: codecov/codecov-action@v2
-        with:
-          files: ./demo/coverage.xml
-          verbose: true
