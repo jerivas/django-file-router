@@ -124,6 +124,15 @@ def view(request, id):
 
 More examples are available in the [demo folder](https://github.com/jerivas/django-file-router/tree/main/demo).
 
+## Configuration
+
+The `file_patterns` function accepts the following arguments:
+
+| Arg | Description |
+|---|---|
+| `append_slash` | Boolean. If `True` will add a trailing slash to the generated patterns. |
+| `exclude` | String (glob). If set each file will be checked against this pattern and excluded from the pattern generation process altogether. Useful if you want to completely avoid importing certain files (like tests). |
+
 ## FAQ
 
 ### What about separation of concerns?

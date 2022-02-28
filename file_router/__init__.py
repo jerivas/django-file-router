@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.template import RequestContext, Template
 from django.urls import path
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 DISALLOWED_CHARS = re.compile(
     "|".join(
